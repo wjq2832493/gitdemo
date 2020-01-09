@@ -18,6 +18,7 @@ public class Test1 extends HttpServlet {
 		writer.print("<h1>Vue`s axios getRequest</h1>");
 		writer.flush();
 		writer.close();
+		System.out.println("¹Ø±Õ");
 	}
 
 	@Override

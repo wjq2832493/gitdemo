@@ -19,6 +19,7 @@ public class Test1 extends HttpServlet {
 		writer.flush();
 		writer.close();
 		System.out.println("¹Ø±Õ");
+		
 	}
 
 	@Override

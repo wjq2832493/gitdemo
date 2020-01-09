@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>axios-post请求</title>
+<script src="./js/vue-2.6.10.js"></script>
+<script src="./js/axios-0.19.0.js"></script>
+</head>
+<body>
+	<div id="app"></div>
+	<script type="text/javascript">
+	Vue.prototype.$axios = axios;
+		new Vue({
+			el:"#app",
+			data:function(){
+	  			return {}
+	  		},
+			template:`
+			<div>
+		    <button @click="send">发送</button>
+		    </div>
+			`,
+			methods:{
+				send:function(){
+				  /*  axios.post('test01',{name:"jack",age:"18"}).then(function(resp){
+					   console.log(resp) 
+				   }) */
+				   this.$axios({
+					   method:"post",
+					   url:"test01",
+					   data:{
+						   name:"jack",age:"18"
+					   }
+				   }).then(function(resp){
+					   alert(resp);
+				   })
+				}
+			}
+			
+		})
+	</script>
+</body>
+</html>

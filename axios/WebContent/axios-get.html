@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>axios get请求</title>
+<script src="./js/vue-2.6.10.js"></script>
+<script src="./js/axios-0.19.0.js"></script>
+</head>
+<body>
+	<div id="app"></div>
+	<script type="text/javascript">
+  	new Vue({
+  		el:"#app",
+  		data:function(){
+  			return {}
+  		},
+  		template:`
+  		<div>
+  		<button @click="send">发送get请求</button></div>
+  		`,
+  		methods:{
+  			send:function(){
+  				/* 第一种写法 */
+  				axios.get('test01?param=axios-get').then(function(resp){
+  		  					console.log(resp.data);
+  		  				})
+  		  		/* 第二种写法 */
+  				/* axios.get('test01',{params:{param:"axios--get"}})
+  				.then(function(resp){
+  					console.log(resp.data);
+  				}) */
+  			}
+  		}
+  	})
+  </script>
+</body>
+</html>
